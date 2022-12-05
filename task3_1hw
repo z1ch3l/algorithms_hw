@@ -1,0 +1,19 @@
+# You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have.
+# Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+# Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+
+class Solution(object):
+    def numberJewelsInStones(self, jewels, stones):
+        count = 0
+        for element in jewels:
+            for item in stones:
+                if element == item:
+                    count += 1
+        return count
+
+
+# Сложность: O(n)
+# Пояснение по решению: 
+# Производится проверка каждого элементв в украшениях, затем -  каждого элемента в камнях.
+# Если есть совпадение => счетчик count увеличивется (здесь сложность будет O(3n), т.к каждый символ нужно проверить двух строках поочередно и только затем проверить условие if.
