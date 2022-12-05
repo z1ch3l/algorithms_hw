@@ -1,0 +1,17 @@
+#Given an integer num, return the number of steps to reduce it to zero.
+#In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+
+num = 123
+def one_step (num):
+    smth = 0
+    while num > 0: #программа повторяется, пока значение переменной больше 0
+        if num % 2 == 1:
+            num -= 1
+        else:
+            num /= 2
+        smth += 1
+    return smth
+
+print (one_step(num))
+
+# Сложность: O(n); программа имеет только цикл while, где будет повторяться n раз (количество операций)
